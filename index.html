@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>לוס אוריה מיטלמן · מכשירה, מנחה ויועצת</title>
+  <meta name="description" content="מכשירה, מנחה ויועצת בפרויקטים של סביבה, מנהיגות וקהילה." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700&family=Heebo:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f7f4ee;
+      --surface: #ffffff;
+      --ink: #1f2a24;
+      --muted: #5b6b61;
+      --accent: #2e7d4f;
+      --accent-soft: #e0f2e6;
+      --line: #e3ded4;
+      --radius: 16px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #161c18;
+        --surface: #1e2620;
+        --ink: #eef3ee;
+        --muted: #aab8ae;
+        --accent: #8fc7a6;
+        --accent-soft: #24362b;
+        --line: #2f3a33;
+      }
+    }
+
+    :root[data-theme="dark"] {
+      --bg: #161c18;
+      --surface: #1e2620;
+      --ink: #eef3ee;
+      --muted: #aab8ae;
+      --accent: #8fc7a6;
+      --accent-soft: #24362b;
+      --line: #2f3a33;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Heebo", system-ui, sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+    }
+
+    h1, h2, h3 {
+      font-family: "Frank Ruhl Libre", "Heebo", serif;
+      line-height: 1.25;
+      margin: 0 0 0.5em;
+    }
+
+    h1 { font-size: clamp(1.9rem, 6vw, 3.4rem); font-weight: 700; }
+    h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 700; }
+    h3 { font-size: 1.25rem; font-weight: 700; }
+
+    p { margin: 0 0 1em; }
+
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    section { padding: 64px 0; }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+
+    .lead {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 640px;
+    }
+
+    .hero { padding: 96px 0 56px; }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      color: var(--bg);
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr;
+      margin-top: 32px;
+    }
+
+    @media (min-width: 720px) {
+      .grid.three { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+
+    .card .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      display: grid;
+      place-items: center;
+      font-size: 1.3rem;
+      margin-bottom: 14px;
+    }
+
+    .card p { color: var(--muted); margin: 0; }
+
+    .about-text { max-width: 720px; }
+
+    .roles .card h3 { color: var(--accent); }
+
+    .contact {
+      background: var(--accent-soft);
+      border-radius: 24px;
+      padding: 40px 28px;
+      text-align: center;
+    }
+
+    .contact p { color: var(--muted); }
+
+    .contact a {
+      color: var(--accent);
+      font-weight: 600;
+      word-break: break-word;
+    }
+
+    footer {
+      padding: 32px 0 48px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+      border-top: 1px solid var(--line);
+    }
+
+    .chips {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chips li {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 18px;
+      font-weight: 600;
+    }
+
+    .placeholder {
+      background: linear-gradient(transparent 60%, var(--accent-soft) 60%);
+      padding: 0 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="wrap hero">
+    <span class="eyebrow">מכשירה · מנחה · יועצת</span>
+    <h1>שלום, אני לוס אוריה מיטלמן</h1>
+    <p class="lead">
+      אני מכשירה, מנחת קבוצות ומאמנת, ועובדת על פרויקטים של סביבה, מנהיגות וקהילה —
+      מתוך הקשבה, כלים מעשיים ורצון אמיתי לראות אנשים צומחים יחד.
+    </p>
+    <div class="actions">
+      <a class="btn primary" href="#contact">ליצירת קשר</a>
+      <a class="btn" href="#about">קצת עליי</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>מי אני</h2>
+      <div class="about-text">
+        <p>
+          אני בוגרת תואר שני בלימודי סביבה, מנחת קבוצות ומאמנת, ובעלת ניסיון עשיר בעבודה עם גופים מגוונים.
+        </p>
+        <p>
+          העבודה שלי נשענת על הכשרה מקצועית, ניסיון בשטח והאמונה ששינוי אמיתי קורה כשאנשים
+          מרגישים שייכות, שומעים זה את זה ומקבלים אחריות על המקום שבו הם נמצאים.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="audience">
+    <div class="wrap">
+      <h2>להכשרות שלי</h2>
+      <p class="lead">הכשרות בנושא מנהיגות, מותאמות לאנשים שפועלים למען הסביבה והקהילה.</p>
+      <ul class="chips">
+        <li>פעילים</li>
+        <li>חוקרים</li>
+        <li>עובדי רשויות</li>
+        <li>סטודנטים</li>
+        <li>אקטיביסטים</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="areas">
+    <div class="wrap">
+      <h2>תחומי העיסוק</h2>
+      <p class="lead">שלושה תחומים שבהם אני מלווה תהליכים, פרויקטים ומנהיגים.</p>
+      <div class="grid three">
+        <article class="card">
+          <div class="icon" aria-hidden="true">🌿</div>
+          <h3>סביבה</h3>
+          <p>
+            פרויקטים סביבתיים, קיימות ומעורבות של אנשים בשינוי של המקום שבו הם חיים ועובדים.
+          </p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">🧭</div>
+          <h3>מנהיגות</h3>
+          <p>
+            פיתוח מנהיגות אישית וארגונית, בניית צוותים מתפקדים וליווי של תהליכי קבלת החלטות.
+          </p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">🤝</div>
+          <h3>קהילה</h3>
+          <p>
+            הקמה וחיזוק של קהילות, מרחבים משתפים ותהליכים שבהם לכל אחד יש קול ומקום.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="roles" class="roles">
+    <div class="wrap">
+      <h2>איך אני יכולה ללוות אתכם</h2>
+      <div class="grid three">
+        <article class="card">
+          <h3>מכשירה</h3>
+          <p>
+            הכשרה בקיימות חיובית.
+            הכשרה שמבססת את העבודה שלי על כלים מקצועיים ומוכרים.
+          </p>
+        </article>
+        <article class="card">
+          <h3>מנחה</h3>
+          <p>
+            מובילה מפגשים, סדנאות וישיבות כך שהאנשים בחדר יוכלו לחשוב ביחד, להחליט ולהתקדם.
+          </p>
+        </article>
+        <article class="card">
+          <h3>יועצת</h3>
+          <p>
+            מלווה ארגונים ויוזמות בתכנון, באבחון אתגרים ובבניית דרך פעולה ברורה ומעשית.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <h2>בואו נדבר</h2>
+        <p>מוזמנים לפנות אליי אם יש לכם פרויקט, תהליך או שאלה שאתם רוצים לחשוב עליה יחד.</p>
+        <p><a href="mailto:luce.ecolead@gmail.com">luce.ecolead@gmail.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> לוס אוריה מיטלמן · כל הזכויות שמורות</div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

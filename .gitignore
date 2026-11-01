@@ -1,0 +1,7 @@
+# Firebase
+.firebase/
+firebase-debug.log*
+firebase-debug.*.log*
+
+# OS
+.DS_Store
