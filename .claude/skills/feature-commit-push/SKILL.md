@@ -28,13 +28,16 @@ Use this after finishing a feature in `/Users/LuceOrya/code/websites/personal-si
    - End the message with the attribution line from the session settings:
      `Co-Authored-By: Claude Haiku 5.5 <noreply@anthropic.com>`
 
-5. **Push.**
-   - On a feature branch: `git push -u origin feature/<slug>`.
-   - On `main`: `git push`.
+5. **Ask before pushing.**
+   - Commit locally first, then show the user the branch name, the commit hash, and the list of files in the commit.
+   - Ask for explicit approval in chat ("לדחוף?") before running any push. Approval for one push does not carry over to the next one.
+   - Only after a clear yes, push:
+     - On a feature branch: `git push -u origin feature/<slug>`.
+     - On `main`: `git push`.
    - Never use `--force`. Never push to `main` if the push would be rejected; stop and report instead.
 
 6. **Report.**
-   - Tell the user the branch name, the commit hash, and the link to the branch on GitHub, for example `https://github.com/luceorya-max/personal-site/tree/feature/<slug>`.
+   - After the push, tell the user the branch name, the commit hash, and the link to the branch on GitHub, for example `https://github.com/luceorya-max/personal-site/tree/feature/<slug>`.
    - If a feature branch was created, say that it is not merged into `main` yet, and ask whether to merge it.
 
 ## Limits
